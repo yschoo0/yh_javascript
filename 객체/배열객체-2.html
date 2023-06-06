@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열객체-2</title>
+</head>
+<body>
+    <script>
+        let arr_1 = ["사당","교대","방배","강남"];
+        let arr_2 = ["신사","압구정","옥수"];
+
+        let result = arr_1.join("-"); //arr_1의 배열에 사이사이 "-"를 조인 해 줌
+        console.log(result);
+
+        result = arr_1.concat(arr_2); //arr_1 배열과 arr_2 배열을 합침
+        console.log(result);
+
+        result = arr_1.slice(1,3); //원하는 인덱스부터 종료숫자 전까지
+        console.log(result);
+        
+        arr_1.sort(); //배열 순서를 오름차순으로 하는 함수
+        console.log(arr_1);
+
+        arr_2.reverse(); //배열 순서를 거꾸로 하는 함수
+        console.log(arr_2);
+    </script>
+</body>
+</html>
