@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue문</title>
+</head>
+<body>
+    <script>
+        // 1번째
+        // for(초깃값; 조건식; 증감식){
+        //     continue;
+        //     자바스크립트 코드;
+        // }
+        // 2번째
+        // var 변수 = 초깃값;
+        // while(조건식){
+        //     증감식;
+        //     continue;
+        //     자바스크립트 코드;
+        // }
+        for(var i = 1; i <= 10; i++){
+            if(i%2 == 0){
+                continue;
+            }
+            document.write(i, "<br>");
+        }document.write("===The End===");
+    </script>
+</body>
+</html>

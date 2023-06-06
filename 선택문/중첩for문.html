@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩for문</title>
+</head>
+<body>
+    <h2>중첩 for문</h2>
+    <script>
+        // for(초깃값; 조건식; 증감식){  바깥쪽 for문
+        //     for(초깃값; 조건식; 증감식){  안쪽 for문
+        //         자바스크립트 코드;
+        //     }
+        // }
+        for(var i = 1; i <= 3; i++){
+            for(var k = 1; k <=2; k++){
+                document.write(i + "행"+ k + "열","<br>");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>
