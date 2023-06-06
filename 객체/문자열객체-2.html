@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열객체-2</title>
+</head>
+<body>
+    <h2>방문자로부터 이름을 영문으로 입력받은 후 방문자가 영문이름을 소문자로 작성했을 경우 대문자로 바꿔 출력합니다.<br>
+    또한 방문자로부터 연락처를 입력받은 후 정보가 노출되지 않도록 전화번호 뒤의 네자리는'*'로 출력되게 하였습니다.</h2>
+    <script>
+        let userName = prompt("당신의 영문 이름은?","");
+
+        let upperName = userName.toUpperCase();
+        document.write(upperName,"<br>");
+
+        let userNum = prompt("당신의 연락처는?","");
+        let result = userNum.substring(0, userNum.length-4)+"****";
+        document.write(result,"<br>");
+    </script>
+</body>
+</html>
