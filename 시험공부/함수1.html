@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Item(title, price){
+         //this={};
+         this.title=title;
+         this.price=price;
+         this.showPrice = function(){
+             console.log(`가격은 ${price}원 입니다.`);
+         }
+         
+         //return this;
+        }
+        const Item1 = new Item('바비인형',13000);
+        const Item2 = new Item('곰인형',3000);
+        const Item3 = new Item('토끼인형',8000);
+
+        console.log(Item1,Item2, Item3)
+
+        Item3.showPrice();
+
+     </script>
+</body>
+</html>

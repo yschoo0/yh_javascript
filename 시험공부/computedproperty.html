@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+</head>
+<body>
+    <script>
+        // let n = "name";
+        // let a = "age";
+
+        // const user = {
+        //     [n] : "Mike",
+        //     [a] : 30,
+        // };
+        // console.log(user);
+
+        //좀 더 실용적인 예제
+        // function makeObj(key, val){
+        //     return{
+        //         [key] : val,
+        //     };
+        // };
+
+        // const obj = makeObj("나이",33);
+
+        // console.log(obj);
+
+        //객체 메소드
+            const user = {
+                name:"Mike",
+                age:30,
+
+            };
+            // const user2 = user; 
+            // user2.name = "Tom";
+
+            // console.log(user);
+            // console.log(user2);
+            // const user2 = Object.assign({},user);
+            // user2.name = "Tom";
+
+            // console.log(user);
+            // console.log(user2);
+
+            //키 값만 반환
+            //const result = Object.keys(user);
+            //value 값만 반환
+            // const result = Object.values(user);
+            //둘 다 갖고 싶으면
+            const result = Object.entries(user);
+            console.log(result);
+    </script>
+</body>
+</html>
