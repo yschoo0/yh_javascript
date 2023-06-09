@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const User = function(name, age){
+            this.name = name;
+            this.age = age;
+            // this.showName = function(){
+            //     console.log(this.name);
+            // };
+        };
+        User.prototype.showName = function(){
+            console.log(this.name);
+        }
+
+        const mike =  User("Mike", 30);
+
+        class User2{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+            showName(){
+                console.log(this.name)
+            }
+        }
+        const tom = new User2('Tom', 19);
+    </script>
+</body>
+</html>

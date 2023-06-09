@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const car = {
+    wheels :4,
+    driver(){
+        console.log("drive..")
+    }
+}
+const bmw = {
+    color:"red",
+    wheels : 4,
+    navigation : 1,
+};
+
+const benz = {
+    color:"black",
+    wheels : 4,
+    
+};
+
+const audi = {
+    color:"blue",
+    wheels : 4,
+};
+bmw.__proto__ = car;
+benz.__proto__ = car;
+audi.__proto__ = car;
+
+    </script>
+</body>
+</html>
