@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //includes는
+        //문자가 있으면 true
+        //없으면 false로 반환
+        function hasCoke(str){
+            if(str.includes('콜라')){ //indexOf 특정 문자 찾기
+                console.log('금칙어가 있습니다.');
+            }else{
+                console.log('통과');
+            }
+        }
+        hasCoke('와 사이다가 짱이야!'); //-1
+        hasCoke('무슨소리, 콜라가 최고!');
+        hasCoke('콜라!');
+    </script>
+</body>
+</html>
