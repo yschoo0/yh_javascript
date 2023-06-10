@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베테랑</title>
+</head>
+<body>
+    <script>
+        const str = "hallym";
+        const {length} = 'str';
+        const per = {id:2022, content:'HTML'};
+        const {id} = per;
+        console.log(id);
+
+        function print({value, completed}){
+            console.log(`value : ${value}, 상태 : ${completed? '완료':'실행중'}`);
+
+        }
+        print({id:1, value:'HTML',completed:true});
+    </script>
+</body>
+</html>
