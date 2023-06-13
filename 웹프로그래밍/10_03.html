@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    (3) 함수 호출문과 실행 결과를 참고하여 연산 결과를 반환하는 total() 
+    클로저 함수를 정의하시오.
+    const cfunc = total();
+    for (let i = 1; i < 6; i++) {
+        let rnd = parseInt(Math.random() * 100) + 1;
+        console.log(`result => ${cfunc(rnd)}`)
+    }
+    <script>
+        const total=function(){
+            let result=0;
+            let cnt=0;
+            const add = function(value){
+                cnt++;
+                if(cnt % 2 == 0){
+                    value *= -1
+                }
+                console.log(`${cnt} : ${value}`);
+                result += value;
+                return result;
+            }
+            return add;
+        }
+
+        const cfunc = total();
+        for(let i = 1; i < 6; i++){
+            let rnd = parseInt(Math.random() * 100)+1;
+            console.log(`result => ${cfunc(rnd)}`)
+        }
+    </script>
+</body>
+</html>

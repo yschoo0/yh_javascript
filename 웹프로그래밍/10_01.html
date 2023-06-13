@@ -18,22 +18,24 @@
     랜덤수의 범위를 1부터 10까지 하고 코드에서 랜덤수가 7이뜨면 "행운의 숫자 7이 떴어요" 라고 
     출력해주는 lucknumber 콜백함수를 구현해
     <script>
-        const callback = (luckey)=> {
-            let max=0, value;
-            for(let i = 1; i <= 10; i++){
-                value=Math.floor(Math.random()*10)+1;
-                console.log(`난수 :${value}`);
-                if(value == 7) {
-                    luckey();
+        const callback = function(){
+            let max =0, value;
+            value=Math.floor(Math.random()*100)+1
+            for(let i = 1; i <=5; i++){
+                console.log(`콜백함수 실행(${i}) : ${value}`);
+                if(value > max){
+                    max=value;
                 }
             }
             return max;
         }
-        const lucknumber = () =>{
-            console.log("행운의 숫자 7이 떴어요");
+        const func_call=(call) =>{
+            for(let i = 0; i<3; i++){
+                console.log(`콜백 함수 ${i+1}번째 호출`)
+                console.log(call());
+            }
         }
-        callback(lucknumber);
-
+        func_call(callback);
     </script>
 </body>
 </html>

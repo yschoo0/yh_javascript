@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const car = {
+            cnum : '40마 3456',
+            owner : 'hallym',
+            distance:1000,
+            set fullCar(str){
+                [this.cnum, this.owner] = str.split(' ');
+            },
+            addDistance(dist){
+                this.distance += dist;
+            },
+            toString(){
+                return `소유자 : ${this.owner}&nbsp;&nbsp;&nbsp; 차량번호 : 
+                ${this.cnum}&nbsp;&nbsp;&nbsp;주행거리 : ${this.distance}`;
+            }
+        };
+        document.write(`${car.toString()} <br><br>`);
+        document.write(`차량번호 ${car.cnum}의 &nbsp; 주행거리를 30추가 <br>`);
+        car.addDistance(30);
+        document.write(`${car.toString()}<br><br>`);
+        document.write(`car 객체의 소유자와 차량번호를 모두 변경합니다.<br>`)
+        car.fullCar='456서2950 software'
+        document.write(car.toString())
+    </script>
+</body>
+</html>
