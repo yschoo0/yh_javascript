@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    
+    <style>
+        p{
+            color: red;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        tr{
+            border-bottom: 1px solid coral;
+        }
+    </style>
+</head>
+<body>
+    <p><em>Values:</em></p>
+    <form>
+        <table>
+            <tr>
+                <td>name:</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>password:</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>url:</td>
+                <td><input type="text" name="url"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="확인"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        // $("input:button").on('click', function(){
+        //     const title = ['name : ','password : ','url : '];
+        //     $("p").text($("input:text, input:password").map(function(index){
+        //         return title[index] + $(this).val() //title의 배열과 받은 값을 리턴해줌
+        //     })
+        //     .get()
+        //     .join(","));
+        // });
+        // $("input:button").on('click',function(){
+        //     const title = ['name : ', 'password : ', 'url : '];
+        //     $("p").text($("input:text, input:password").map(function(index){
+        //         return title[index]+$(this).val()
+        //     })
+        //     .get()
+        //     .join(",")
+        //     )
+        // })
+        $("input:button").on('click',function(){
+            const title=['name : ','password : ','url :'];
+            $("p").text($("input:text, input:password").map(function(index){
+                return title[index] + $(this).val()
+            })
+            .get()
+            .join(",")
+            )
+        });
+    </script>
+</body>
+</html>

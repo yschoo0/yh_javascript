@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        // $(function(){
+        //     $('.hallym').css('width','200px');
+        //     $('.hallym').odd().css('background-color','silver');
+        //     $('.hallym').even().css('background-color','orange');
+        //     $('.hallym').each(function(){
+        //         $(this).html(`${$(this).text()} 소개`);
+        //     })
+        // });
+        $(function(){
+            $(".hallym").css('width','100px')
+            $(".hallym").odd().css('background-color','lightcoral')
+            $(".hallym").even().css('background-color','lightblue')
+            $(".hally,").each(function(){
+                $(this).html(`${$(this).text()} 소개`);
+            })
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery selector 사용하기</h2>
+    <h4 class="hallym">css3</h4>
+    <h4 class="hallym">html</h4>
+    <h4 class="hallym">Javascript</h4>
+    <h4 class="hallym">TypeScript</h4>
+    <h4 class="hallym">jQuery</h4>
+</body>
+</html>

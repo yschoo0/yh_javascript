@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        class product{
+            constructor(kind, count){
+                this.kind=kind;
+                this.count=count;
+            }
+            toString(){
+                return `품목 : ${this.kind},&nbsp;&nbsp;&nbsp; 구입 개수 : ${this.count}`;
+            }
+        }
+        let insert = function(){
+            let array = new Array();
+
+            while(true){
+                item = prompt("구입 품목과 개수를 입력하세요 \n 종료하려면 취소버튼을 클릭하세요");
+                if(item === null){
+                    break;
+                }
+                let [kind, count] = item.split(' ');
+                array.push(new product(kind, Number(count)));
+            }
+            return array;
+        }
+        $(function(){
+            let result = insert();
+            let ans = '';
+            let total = 0;
+
+            result.forEach((item)=>{
+                ans += `<li> ${item.toString()}</li>`;
+                total += item.count;
+            });
+            $('ul').html(ans).css('list-style','none');
+            $('h2').last().html(`총 구매 개수는 ${total} 입니다.`);
+            $('li').even().css('color','coral');
+            $('li').odd().css('color','green');
+        })
+    </script>
+    <style>
+        hr{
+            width: 400px;
+            margin-left : 10px;
+            border: 1px solid chocolate;
+        }
+    </style>
+</head>
+<body>
+    <h2>구매내역</h2>
+    <ul></ul>
+    <hr>
+    <h2></h2>
+</body>
+</html>

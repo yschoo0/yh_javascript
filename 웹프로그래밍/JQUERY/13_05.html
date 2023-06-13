@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        $(function(){
+            $('li.red').text('jQuery').css('color','green');
+            $('li').not('.red').text('selector 연습').css('color','blue');
+        })
+    </script>
+</head>
+<body>
+    <h1>school</h1>
+    <ul>
+        <li class="red">hallym</li>
+        <li class="red">info data</li>
+        <li class="blue">software</li>
+        <li class="red">big data</li>
+        <li class="green">smart IoT</li>
+        <li class="red">contentIT</li>
+    </ul>
+</body>
+</html>

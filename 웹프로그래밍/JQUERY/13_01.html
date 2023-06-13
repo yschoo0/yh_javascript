@@ -19,13 +19,20 @@
         }
     </style>
     <script>
-        $(function (){
-            const color = ['red','green','yellow'];
+        // $(function (){
+        //     const color = ['red','green','yellow'];
+
+        //     $('div a').css({'text-decoration':'none','line-height':'100px','display':'block','text-align':'center'});
+        //     $('div').addClass('circle');
+        //     $('.circle').each((i,v) => {$(v).css('background-color',`${color[i]}`);});
+        // });
+        $(function(){
+            const color = ['red','yellow','green'];
 
             $('div a').css({'text-decoration':'none','line-height':'100px','display':'block','text-align':'center'});
             $('div').addClass('circle');
-            $('.circle').each((i,v) => {$(v).css('background-color',`${color[i]}`);});
-        });
+            $('.circle').each((i,v)=>{$(v).css('background-color',`${color[i]}`);});
+        })
     </script>
 </head>
 <body>

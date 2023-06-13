@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <div id="box"></div>
+    <script>
+        // $(document).ready(function(){
+        //     let color = new Array('blue','red','brown','green','black','deeppingk');
+        //     let index = 0;
+        //     $('h1').text('1초마다 색이 변경되는 박스');
+        //     setInterval(function(){
+        //         index=Math.floor(Math.random()*color.length);
+        //         $('#box').css('background-color',`${color[index]}`);
+        //     },1000);
+        // });
+        // $(document).ready(function(){
+        //     let color = new Array('lightblue','lightcoral','lightpink','deeppink','purple','darkblue');
+        //     let index = 0;
+        //     $('h1').text('1초마다 색이 변경되는 박스');
+        //     setInterval(function(){
+        //         index = Math.floor(Math.random()*color.length);
+        //         $('#box').css('background-color',`${color[index]}`);
+        //     },1000);
+        // })
+        $(document).ready(function(){
+            let color = new Array('red','blue','orange','yello','green');
+            let index = 0;
+            $('h1').text('ㅇ런ㄹ');
+            setInterval(function(){
+                index = Math.floor(Math.random()*color.length);
+                $('#box').css('background-color',`${color[index]}`)
+            },1000);
+        })
+    </script>
+</body>
+</html>
