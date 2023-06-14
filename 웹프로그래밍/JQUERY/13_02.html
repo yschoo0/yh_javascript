@@ -7,26 +7,25 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script>
-        // $(function(){
-        //     $('.hallym').css('width','200px');
-        //     $('.hallym').odd().css('background-color','silver');
-        //     $('.hallym').even().css('background-color','orange');
-        //     $('.hallym').each(function(){
-        //         $(this).html(`${$(this).text()} 소개`);
-        //     })
-        // });
         $(function(){
-            $(".hallym").css('width','100px')
-            $(".hallym").odd().css('background-color','lightcoral')
-            $(".hallym").even().css('background-color','lightblue')
-            $(".hally,").each(function(){
+            $('.hallym').css('width','200px');
+            $('.hallym:odd').css('background','silver');
+            $('.hallym:even').css('background','orange');
+            $('.hallym').each(function(){
                 $(this).html(`${$(this).text()} 소개`);
             })
         });
+        // $(function(){
+        //     $(".hallym").css('width','100px')
+        //     $(".hallym").odd().css('background-color','lightcoral')
+        //     $(".hallym").even().css('background-color','lightblue')
+        //     $(".hally,").each(function(){
+        //         $(this).html(`${$(this).text()} 소개`);
+        //     })
+        // });
     </script>
 </head>
 <body>
-    <h2>jQuery selector 사용하기</h2>
     <h4 class="hallym">css3</h4>
     <h4 class="hallym">html</h4>
     <h4 class="hallym">Javascript</h4>
