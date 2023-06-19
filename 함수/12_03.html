@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        1~100사이의 난수를 5개 생성하여 가장 큰 값을 반환하는 콜백 함수 callback()을 함수 표현식으로<br>
+        구현하고 callback 콜백 함수를 매개변수로 받아 3번 호출하는 고차 함수 func_call()을 구현하시오
+    </h2>
+    <ul>
+        <li style="font-size: xx-large;">난수 생성 : Math.floor(Math.random()*100)+1</li>
+        <li style="font-size: xx-large;">모든 출력은 콘솔로 한다.</li>
+    </ul>
+    랜덤수의 범위를 1부터 10까지 하고 코드에서 랜덤수가 7이뜨면 "행운의 숫자 7이 떴어요" 라고 
+    출력해주는 lucknumber 콜백함수를 구현해
+    <script>
+        const callback = function(){
+            let max =0, value;
+            value=Math.floor(Math.random()*100)+1
+            for(let i = 1; i <=5; i++){
+                console.log(`콜백함수 실행(${i}) : ${value}`);
+                if(value > max){
+                    max=value;
+                }
+            }
+            return max;
+        }
+        const func_call=(call) =>{
+            for(let i = 0; i<3; i++){
+                console.log(`콜백 함수 ${i+1}번째 호출`)
+                console.log(call());
+            }
+        }
+        func_call(callback);
+    </script>
+    이거 삭제해
+</body>
+</html>
