@@ -4,25 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>부모요소선택자</title>
+    <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
-            $("#list_1").parent().css("border","2px dashed #f00");
+            $("#tit3,h1").css("background-color","#0ff").css("border","2px dashed #f00");
         });
     </script>
 </head>
 <body>
-    <h1>인접 관계 선택자</h1>
-    <ul id="wrap">
-        <li>
-            <ul>
-                <li id="list_1">리스트1-1</li>
-                <li>리스트1-2</li>
-            </ul>
-        </li>
-        <li>리스트2</li>
-        <li>리스트3</li>
-    </ul>
+    <h1>제이쿼리</h1>
+    <h2>선택자</h2>
+    <h3 id="tit3">직접 선택자</h3>
+    <h3>인접선택자</h3>
 </body>
 </html>
